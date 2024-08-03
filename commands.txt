@@ -1,0 +1,15 @@
+2677  git remote -v\n
+ 2678  ssh -T git@github.com
+ 2679  eval "$(ssh-agent -s)"
+ 2680  ssh -T git@github.com
+ 2681  ssh-add ~/.ssh/i_account2
+ 2682  ssh -T git@github.com
+ 2683  ssh-add ~/.ssh/i_account1
+ 2684  ssh -T git@github.com
+ 2685  ssh-add ~/.ssh/i_account3
+ 2686  code ~/.ssh/config
+ 2687  ssh -T git@github.com
+ 2688  git remote set-url git@github.com:iqlab-africa/starter-example.git
+ 2689  git remote set-url origin git@github.com:iqlab-africa/starter-example.git
+ 2690  ssh -vT git@github.com\n
+ 2691  git push
