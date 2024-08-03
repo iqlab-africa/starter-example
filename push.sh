@@ -1,36 +1,51 @@
 #!/bin/bash
-message=$1
-echo 🔴 Parameters required: ssh_key_path, repository_ssh_url, commit_message
 
-if [ -z "$1" ]; then
-  echo "👿 Please enter required parameters; (SSH key path, repo SSH url and commit message 👿"
+# Ensure the script is called with three arguments
+if [ "$#" -ne 3 ]; then
+  echo "👿 Please enter required parameters: SSH key path, repository SSH URL, and commit message. 👿"
   exit 1
 fi
-if [ -z "$2" ]; then
-  echo "👿 Please enter repository SSH url and commit message 👿"
-  exit 1
-fi
-if [ -z "$3" ]; then
-  echo "👿 Please enter commit message 👿"
-  exit 1
-fi
-echo COMMIT - 🎽🎽 - add and commit the code
 
+# Assign parameters to variables
+ssh_key_path=$1
+repository_ssh_url=$2
+commit_message=$3
+
+# Echo the parameters for clarity
+echo "🔴 Parameters provided:"
+echo "SSH Key Path: $ssh_key_path"
+echo "Repository SSH URL: $repository_ssh_url"
+echo "Commit Message: $commit_message"
+
+# Check if SSH key path file exists
+if [ ! -f "$ssh_key_path" ]; then
+  echo "👿 SSH key file does not exist at the specified path: $ssh_key_path 👿"
+  exit 1
+fi
+
+# Check if the repository SSH URL is valid (basic check)
+if ! echo "$repository_ssh_url" | grep -q "^git@github.com:.*\.git$"; then
+  echo "👿 Repository SSH URL does not seem valid: $repository_ssh_url 👿"
+  exit 1
+fi
+
+# Add and commit the code
+echo "🎽🎽 - Adding and committing the code..."
 git add .
-git commit -m "$3"
+git commit -m "$commit_message"
 
-echo 🎽🎽🎽🎽 push the code ... using SSH Key ...
-
+# Set up SSH and check connection
+echo "🎽🎽🎽🎽 Pushing the code ... using SSH Key ..."
 eval "$(ssh-agent -s)"
-ssh-add $1 && ssh -T git@github.com
+ssh-add "$ssh_key_path" || { echo "👿 Failed to add SSH key. 👿"; exit 1; }
+ssh -T git@github.com || { echo "👿 SSH connection test failed. 👿"; exit 1; }
 
-echo 🍎 🍎 🍎 SET REMOTE SSH URL ...
-git remote set-url origin $2
+# Set the remote URL
+echo "🍎 🍎 🍎 Setting remote SSH URL ..."
+git remote set-url origin "$repository_ssh_url"
 
-echo 🍎 🍎 🍎 PUSH, SKOROKORO!!
-git push
+# Push the code
+echo "🍎 🍎 🍎 Pushing the code..."
+git push || { echo "👿 Failed to push code. 👿"; exit 1; }
 
-echo DONE!! 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 
-
-# git@github.com:iqlab-africa/starter-example.git
-# ~/.ssh/i_account2
+echo "DONE!! 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬"
