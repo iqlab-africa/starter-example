@@ -38,7 +38,7 @@ git commit -m "$commit_message"
 echo "🎽🎽🎽🎽 Pushing the code ... using SSH Key ..."
 eval "$(ssh-agent -s)"
 ssh-add "$ssh_key_path" || { echo "👿 Failed to add SSH key. 👿"; exit 1; }
-ssh -T git@github.com || { echo "👿 SSH connection test failed. 👿"; exit 1; }
+ssh -T git@github.com 
 
 # Set the remote URL
 echo "🍎 🍎 🍎 Setting remote SSH URL ..."
