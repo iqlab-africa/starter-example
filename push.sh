@@ -69,7 +69,7 @@ echo "DONE!! 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬"
 # 🔴 Commit Message: refactored push script 👿
 # # 🎽🎽 - Adding and committing the code...
 # [main 86447f3] refactored push script 👿
- 1 file changed, 10 insertions(+), 8 deletions(-)
+# 1 file changed, 10 insertions(+), 8 deletions(-)
 #🎽🎽🎽🎽 Pushing the code ... using SSH Key ...
 #Agent pid 50921
 # Identity added: /Users/aubreymalabie/.ssh/i_account2 (aubrey@iqlab.africa)
