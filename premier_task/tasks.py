@@ -1,3 +1,4 @@
+from logging import Logger
 from robocorp import browser
 from robocorp.tasks import task
 from RPA.Excel.Files import Files as Excel
@@ -12,7 +13,7 @@ EXCEL_URL = f"https://rpachallenge.com/assets/downloadFiles/{FILE_NAME}"
 
 
 @task
-def solve_challenge():
+def crawl_premier_league():
     """
     Solve the RPA challenge
     
@@ -59,6 +60,7 @@ def fill_and_submit_form(row):
     """
     Fills a single form with the information of a single row in the Excel
     """
+    Logger.debug('Fill and Submit')
     page = browser.page()
     page.fill("//input[@ng-reflect-name='labelFirstName']", str(row["First Name"]))
     page.fill("//input[@ng-reflect-name='labelLastName']", str(row["Last Name"]))

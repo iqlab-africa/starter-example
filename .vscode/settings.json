@@ -1,5 +1,9 @@
 {
     "python.analysis.extraPaths": [
-        "/Users/aubreymalabie/Work/iqlabs/with-ssh/starter-example/starter_task/."
+        "/Users/aubreymalabie/Work/iqlabs/with-ssh/starter-example/premier_task/."
+    ],
+    "cSpell.words": [
+        "robocorp",
+        "workitems"
     ]
 }

@@ -1,13 +1,15 @@
+from logging import Logger
 from pathlib import Path
 
 from robocorp import workitems
 from robocorp.tasks import get_output_dir, task
 from RPA.Excel.Files import Files as Excel
-
+mm = '';
 
 @task
 def producer():
     """Split Excel rows into multiple output Work Items for the next step."""
+    Logger.debug(f'{mm} Producer started ...')
     output = get_output_dir() or Path("output")
     filename = "orders.xlsx"
 
@@ -30,6 +32,8 @@ def producer():
 @task
 def consumer():
     """Process all the produced input Work Items from the previous step."""
+    Logger.debug(f'{mm} Consumer started ...')
+
     for item in workitems.inputs:
         try:
             name = item.payload["Name"]

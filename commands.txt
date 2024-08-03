@@ -13,3 +13,8 @@
  2689  git remote set-url origin git@github.com:iqlab-africa/starter-example.git
  2690  ssh -vT git@github.com\n
  2691  git push
+
+
+🎽🎽🎽🎽 STEPS TO PUSH CODE
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/i_account2 && ssh -T git@github.com
