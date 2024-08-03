@@ -51,3 +51,33 @@ echo "🍎 🍎 🍎 ... Pushing the code ..."
 git push || { echo "👿👿👿👿 Failed to push code. 👿"; exit 1; }
 
 echo "DONE!! 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬"
+
+/*
+Aubreys-MacBook-Pro starter-example % ./push.sh ~/.ssh/i_account2 git@github.com:iqlab-africa/starter-example.git "refactored push script 👿"
+
+🔴 🔴 🔴 🔴 🔴 Generic GitHub Push script starting ...
+🔴 🔴 🔴
+🔴 🔴 Parameters provided:
+🔴 SSH Key Path: /Users/aubreymalabie/.ssh/i_account2
+🔴 Repository SSH URL: git@github.com:iqlab-africa/starter-example.git
+🔴 Commit Message: refactored push script 👿
+🎽🎽 - Adding and committing the code...
+[main 86447f3] refactored push script 👿
+ 1 file changed, 10 insertions(+), 8 deletions(-)
+🎽🎽🎽🎽 Pushing the code ... using SSH Key ...
+Agent pid 50921
+Identity added: /Users/aubreymalabie/.ssh/i_account2 (aubrey@iqlab.africa)
+Hi aubreymalabie! You've successfully authenticated, but GitHub does not provide shell access.
+🍎 🍎 🍎 Setting remote SSH URL ... git@github.com:iqlab-africa/starter-example.git
+🍎 🍎 🍎 ... Pushing the code ...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 455 bytes | 455.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:iqlab-africa/starter-example.git
+   0aa7eff..86447f3  main -> main
+DONE!! 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬
+*/
