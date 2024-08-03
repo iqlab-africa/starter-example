@@ -1,4 +1,5 @@
-from logging import Logger
+import json
+import logging
 from robocorp import browser
 from robocorp.tasks import task
 from RPA.Excel.Files import Files as Excel
@@ -6,67 +7,112 @@ from RPA.Excel.Files import Files as Excel
 from pathlib import Path
 import os
 import requests
+from dataclasses import asdict, dataclass
+from datetime import datetime
 
-FILE_NAME = "challenge.xlsx"
-OUTPUT_DIR = Path(os.environ.get('ROBOT_ARTIFACTS'))
-EXCEL_URL = f"https://rpachallenge.com/assets/downloadFiles/{FILE_NAME}"
 
+@dataclass
+class FootballVideo:
+    snippet: str
+    title: str
+    link: str
+    rank: int
+    date: str
+
+    def __str__(self):
+        return json.dumps(asdict(self))
+
+
+APIKEY = "66ae2e8af5d49eb9951dcb15"
+mm = "🔵 🔵 Premier League/NFL Video Bot 🔵"
+
+premier_league_queries = [
+    "latest Premier League Arsenal highlight videos",
+    "latest Premier League Arsenal player videos",
+    "latest Premier League Arsenal team videos",
+]
+
+nfl_queries = [
+    "latest NFL Baltimore Ravens highlight videos",
+    "latest NFL Baltimore Ravens player videos",
+    "latest NFL Baltimore Ravens team videos",
+]
+
+video_links = []
 
 @task
-def crawl_premier_league():
-    """
-    Solve the RPA challenge
-    
-    Downloads the source data excel and uses Playwright to solve rpachallenge.com from challenge
-    """
-    browser.configure(
-        browser_engine="chromium",
-        screenshot="only-on-failure",
-        headless=True,
+def premier_task():
+    """Premier Task"""
+    print(f"{mm} Houston, we are starting ...  💙 queries: {len(premier_league_queries)}")
+    # Search for Premier League content
+    for query in premier_league_queries:
+        result = search(query)
+        for fv in result:
+            video_links.append(fv)
+        print(f"{mm} video links so far :  💙 {len(video_links)}")
+
+    # Search for National Football League content
+    for query in nfl_queries:
+        result = search(query)
+        for fv in result:
+            video_links.append(fv)
+        print(f"{mm} video links so far :  💙 {len(video_links)}")
+
+    print(
+        f"\n\n{mm} robot premier_task completed. video links to be returned : 🥬🥬🥬🥬🥬🥬🥬🥬 {len(video_links)} videos \n\n"
     )
-    try:
-        excel_file = download_file(EXCEL_URL, OUTPUT_DIR, FILE_NAME)
-        excel = Excel()
-        excel.open_workbook(excel_file)
-        rows = excel.read_worksheet_as_table("Sheet1", header=True)
-
-        page = browser.goto("https://rpachallenge.com/")
-        page.click("button:text('Start')")
-        for row in rows:
-            fill_and_submit_form(row)
-        element = page.locator("css=div.congratulations")
-        browser.screenshot(element)
-
-    finally:
-        # Place for teardown and cleanups
-        # Playwright handles browser closing
-        print('Done')
+    count = 1
+    for m in video_links:
+        print(f'{mm} video #{count}: {m.link}')
+        count = count + 1
+    return video_links
 
 
-def download_file(url: str, target_dir: Path, target_filename:str) -> str:
-    """ 
-    Downloads a file from the given url into the given folder with given filename. 
-    """
-    target_dir.mkdir(exist_ok=True)
-    response = requests.get(url)
-    response.raise_for_status()  # This will raise an exception if the request fails
-    local_filename = Path(target_dir, target_filename)
-    with open(local_filename, 'wb') as f:
-        f.write(response.content)  # Write the content of the response to a file
-    return local_filename
-
-
-def fill_and_submit_form(row):
-    """
-    Fills a single form with the information of a single row in the Excel
-    """
-    Logger.debug('Fill and Submit')
-    page = browser.page()
-    page.fill("//input[@ng-reflect-name='labelFirstName']", str(row["First Name"]))
-    page.fill("//input[@ng-reflect-name='labelLastName']", str(row["Last Name"]))
-    page.fill("//input[@ng-reflect-name='labelCompanyName']", str(row["Company Name"]))
-    page.fill("//input[@ng-reflect-name='labelRole']", str(row["Role in Company"]))
-    page.fill("//input[@ng-reflect-name='labelAddress']", str(row["Address"]))
-    page.fill("//input[@ng-reflect-name='labelEmail']", str(row["Email"]))
-    page.fill("//input[@ng-reflect-name='labelPhone']", str(row["Phone Number"]))
-    page.click("input:text('Submit')")
+def search(query):
+    """Search the web for League info ..."""
+    print(f"\n\n\n{mm} search starting ... 💙 query: {query}")
+    local_list = []
+    payload = {"api_key": APIKEY, "q": query, "gl": "eu"}
+    resp = requests.get("https://api.serpdog.io/lite_search", params=payload)
+    # Check if the request was successful
+    if resp.status_code == 200:
+        print(
+            f"{mm} We good, Boss! 💙 Status code: {resp.status_code} elapsed: {resp.elapsed}"
+        )
+    else:
+        print(f"{mm} Call failed. 👿 Status code: {resp.status_code} reason: ${resp.reason}")
+        return []
+    # process the response
+    m = resp.json()
+    link_list = list(m.values())
+    print(f"{mm} number of links:  💙 {len(link_list)}")
+    count = 0
+    for x in link_list:
+        if count > 2:
+            print(f"{mm} number of elements: 🥦 {len(x)} 🥦")
+            for z in x:
+                try:
+                    link = z.get("link")
+                    snippet = z.get("snippet")
+                    title = z.get("title")
+                    rank = z.get("rank")
+                    m_date = datetime.now().isoformat()
+                    if link and 'watch' in link:
+                        fv = FootballVideo(
+                            snippet=snippet,
+                            title=title,
+                            link=link,
+                            rank=rank,
+                            date=m_date,
+                        )
+                        local_list.append(fv)
+                    else:
+                        print("👿 Link not found for the given item.")
+                except Exception as e:
+                    print(f"An error occurred: {e}")
+                    continue  # This will skip to the next iteration in case of an exception
+        else:
+            print(f"{mm} ignored ... count: {count}")
+        count = count + 1
+    
+    return local_list

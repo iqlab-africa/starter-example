@@ -1,0 +1,59 @@
+{"meta": {"api_key": "66ae2e8af5d49eb9951dcb15", "q": "Premier League News", "gl": "eu"}, 
+    "user_credits_info": {"quota": 1000, "requests": 45, "requests_left": 955}, 
+    "menu_items": [
+        {"title": "News", "link": "https://www.google.com/search?q=Premier+League+News&sca_esv=e2be5bc300ae4fb1&sca_upv=1&gl=eu&hl=en&tbm=nws&source=lnms&sa=X&ved=0ahUKEwib47qM_tiHAxWiRmwGHTN-CdgQ_AUIBigB", "position": 1}, 
+        {"title": "Videos", "link": "https://www.google.com/search?q=Premier+League+News&sca_esv=e2be5bc300ae4fb1&sca_upv=1&gl=eu&hl=en&tbm=vid&source=lnms&sa=X&ved=0ahUKEwib47qM_tiHAxWiRmwGHTN-CdgQ_AUIBygC", "position": 2}, 
+        {"title": "Images", "link": "https://www.google.com/search?q=Premier+League+News&sca_esv=e2be5bc300ae4fb1&sca_upv=1&gl=eu&hl=en&tbm=isch&source=lnms&sa=X&ved=0ahUKEwib47qM_tiHAxWiRmwGHTN-CdgQ_AUICCgD", "position": 3}, 
+        {"title": "Shopping", "link": "https://www.google.com/url?url=/search%3Fq%3DPremier%2BLeague%2BNews%26sca_esv%3De2be5bc300ae4fb1%26sca_upv%3D1%26gl%3Deu%26hl%3Den%26tbm%3Dshop%26source%3Dlnms%26ved%3D1t:200713%26ictx%3D111&rct=j&q=&esrc=s&opi=89978449&sa=U&ved=0ahUKEwib47qM_tiHAxWiRmwGHTN-CdgQiaAMCAkoBA&usg=AOvVaw09QsQIChx9aLRpR1ll_jp-", "position": 4}, 
+        {"title": "Books", "link": "https://www.google.com/search?q=Premier+League+News&sca_esv=e2be5bc300ae4fb1&sca_upv=1&gl=eu&hl=en&tbm=bks&source=lnms&sa=X&ved=0ahUKEwib47qM_tiHAxWiRmwGHTN-CdgQ_AUICigF", "position": 5}
+    ], 
+    "peopleAlsoAskedFor": [
+            {"question": "Who are the big 4 in the Premier League?", "id": "accdef_1", "rank": 1, "displayed_link": "https://www.123rf.com › photo_14260292_english-premier-league-big-four-club...", "link": "https://www.123rf.com/photo_14260292_english-premier-league-big-four-clubs-arsenal-chelsea-liverpool-and-manchester-united.html", "title": "English Premier League Big Four clubs: Arsenal, Chelsea, Liverpool ...", "answer": "English Premier League Big Four Clubs: Arsenal, Chelsea, Liverpool And Manchester United. Stock Photo, Picture and Royalty Free Image. Image 14260292."}, 
+            {"question": "Who won the Premier League most?", "id": "accdef_3", "rank": 2, "displayed_link": "https://", "link": None, "title": "", "answer": "Manchester City F.C."}, 
+            {"question": "How many teams are in the Premier League?", "id": "accdef_5", "rank": 3, "displayed_link": "https://www.premierleague.com › premier-league-explained", "link": "https://www.premierleague.com/premier-league-explained", "title": "Premier League Competition Format & History", "answer": "The Premier League is the top tier of England's football pyramid, with 20 teams battling it out for the honour of being crowned English champions."}, 
+            {"question": "When was the Premier League founded?", "id": "accdef_7", "rank": 4, "displayed_link": "https://www.britannica.com › topic › Premier-League", "link": "https://www.britannica.com/topic/Premier-League", "title": "Premier League | History & Formation | Britannica", "answer": "Recent News. Premier League, English professional football (soccer) league established in 1992. The league, which comprises 20 clubs, superseded the first division of the English Football League (EFL) as the top level of football in England."}], "organic_results": [{"title": "Premier League Football News, Fixtures, Scores & Results", "displayed_link": "https://www.premierleague.com", "snippet": "19 hours ago · For all the latest Premier League news, visit the official website of the Premier League.News · Latest News · Ultimate Premier League... · Premier League Charitable Fund", "link": "https://www.premierleague.com/", 
+            "extended_sitelinks": [
+                {"title": "News", "link": "https://www.premierleague.com/news"}, 
+                {"title": "Latest News", "link": "https://www.premierleague.com/news/4055481"}, 
+                {"title": "Ultimate Premier League...", "link": "https://www.premierleague.com/news/4037859"}, 
+                {"title": "Premier League Charitable Fund", "link": "https://www.premierleague.com/footballandcommunity/premier-league-charitable-fund"}
+                ], 
+                "rank": 1}, {"title": "Premier League News - Latest News & Highlights - Sky Sports", "displayed_link": "https://www.skysports.com › premier-league-news", "snippet": "15 hours ago · Follow the latest Premier League news with Sky Sports - breaking stories, transfer news, video highlights, latest results, rumours and player interviews.", "link": "https://www.skysports.com/premier-league-news", 
+                "rank": 2}, {"title": "Latest Premier League Football Team News & Features", "displayed_link": "https://www.premierleague.com › news", "snippet": "Read all the latest Premier League news & features, visit the official website of the Premier League.Fantasy Premier League · Premier League players... · Kits · Arne Slot", "link": "https://www.premierleague.com/news", 
+                    "extended_sitelinks": [
+                        {"title": "Fantasy Premier League", "link": "https://www.premierleague.com/news/4055481"}, 
+                        {"title": "Premier League players...", "link": "https://www.premierleague.com/news/4034361"}, 
+                        {"title": "Kits", "link": "https://www.premierleague.com/news/3991632"}, 
+                        {"title": "Arne Slot", "link": "https://www.premierleague.com/news/4024921"}], 
+                "rank": 3}, {"title": "Premier League Football - Latest news, results, stats & transfers - BBC", "displayed_link": "https://www.bbc.com › sport › football › premier-league", "snippet": "The home of Premier League on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio.", "link": "https://www.bbc.com/sport/football/premier-league", 
+                "rank": 4}, {"title": "Premier League News, Fixtures and Results | Daily Mail Online", "displayed_link": "https://www.dailymail.co.uk › sport › premierleague", "snippet": "4 hours ago · Get the latest Premier League news for 2023/24 season including upcoming EPL fixtures and live scores.", "link": "https://www.dailymail.co.uk/sport/premierleague/index.html", 
+                "rank": 5}, {"title": "Premier League - EPL News - NewsNow", "displayed_link": "https://www.newsnow.co.uk › Sport › Football", "snippet": "Breaking Premier League news, rumours, results and top stories about your favourite clubs, including transfers, team news, fixtures and all the latest news.", "link": "https://www.newsnow.co.uk/h/Sport/Football/Premier+League", 
+                "rank": 6}, {"title": "Premier League - Sky Sports Football", "displayed_link": "https://www.skysports.com › premier-league", "snippet": "6 hours ago · Get the latest Premier League news, fixtures, results, video highlights, transfers and more from Sky Sports.News · Premier League transfers · Sky Sports Premier League · Fixtures", "link": "https://www.skysports.com/premier-league", 
+                    "extended_sitelinks": [
+                        {"title": "News", "link": "https://www.skysports.com/premier-league-news"}, 
+                        {"title": "Premier League transfers", "link": "https://www.skysports.com/football/news/11095/13143812/premier-league-transfers-data-insights-on-what-each-club-needs-in-summer-window"}, 
+                        {"title": "Sky Sports Premier League", "link": "https://www.skysports.com/watch/sky-sports-premier-league"}, 
+                        {"title": "Fixtures", "link": "https://www.skysports.com/premier-league-fixtures"}], 
+                "rank": 7}, {"title": "English Premier League News, Stats, Scores - ESPN", "displayed_link": "https://www.espn.com › soccer › league › name › eng.1", "snippet": "Follow all the latest English Premier League football news, fixtures, stats, and more on ESPN.English Premier League Scores · Soccer Schedule · Statistics · Manchester United", "link": "https://www.espn.com/soccer/league/_/name/eng.1", 
+                    "extended_sitelinks": [
+                        {"title": "English Premier League Scores", "link": "https://www.espn.com/soccer/scoreboard/_/league/eng.1"}, 
+                        {"title": "Soccer Schedule", "link": "https://www.espn.com/soccer/schedule/_/league/eng.1"}, 
+                        {"title": "Statistics", "link": "https://www.espn.com/soccer/stats/_/league/eng.1"}, 
+                        {"title": "Manchester United", "link": "https://www.espn.com/soccer/team/_/id/360/manchester-united"}], 
+                "rank": 8}, {"title": "Premier League News - Results, Fixtures, Scores, Stats, and Rumors", "displayed_link": "https://www.nytimes.com › athletic › football › premier-league", "snippet": "5 hours ago · Breaking Premier League news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest injury updates, player news...Premier League schedule · Premier League table · Transfer News · Teams", "link": "https://www.nytimes.com/athletic/football/premier-league/", 
+                    "extended_sitelinks": [
+                        {"title": "Premier League schedule", "link": "https://www.nytimes.com/athletic/football/premier-league/schedule/"}, 
+                        {"title": "Premier League table", "link": "https://www.nytimes.com/athletic/football/premier-league/standings/"}, 
+                        {"title": "Transfer News", "link": "https://www.nytimes.com/athletic/live-blogs/transfer-news-live-latest-updates/KLq8uUYYXgMK/"}, 
+                        {"title": "Teams", "link": "https://www.nytimes.com/athletic/football/premier-league/teams/"}], 
+                "rank": 9}], "relatedSearches": [
+                    {"query": "Premier League news transfer", "link": "https://google.com/search?gl=eu&q=Premier+League+news+transfer"}, 
+                    {"query": "Premier League news now", "link": "https://google.com/search?gl=eu&q=Premier+League+news+now"}, 
+                    {"query": "Premier League news today Sky Sports", "link": "https://google.com/search?gl=eu&q=Premier+League+news+today+Sky+Sports"}, 
+                    {"query": "Premier League table", "link": "https://google.com/search?gl=eu&q=Premier+League+table"}, 
+                    {"query": "BBC EPL news", "link": "https://google.com/search?gl=eu&q=BBC+EPL+news"}, 
+                    {"query": "EPL news and fixtures", "link": "https://google.com/search?gl=eu&q=EPL+news+and+fixtures"}, 
+                    {"query": "Premier League fixtures", "link": "https://google.com/search?gl=eu&q=Premier+League+fixtures"}, 
+                    {"query": "Premier League today", "link": "https://google.com/search?gl=eu&q=Premier+League+today"}
+                    ]
+                }

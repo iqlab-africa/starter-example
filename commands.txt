@@ -18,3 +18,5 @@
 🎽🎽🎽🎽 STEPS TO PUSH CODE
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/i_account2 && ssh -T git@github.com
+
+./push.sh ~/.ssh/i_account2 git@github.com:iqlab-africa/starter-example.git "🔵🔵 refactored video search"

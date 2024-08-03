@@ -3,7 +3,11 @@
         "/Users/aubreymalabie/Work/iqlabs/with-ssh/starter-example/premier_task/."
     ],
     "cSpell.words": [
+        "APIKEY",
+        "premierleague",
         "robocorp",
+        "sitelinks",
         "workitems"
-    ]
+    ],
+    "python.terminal.activateEnvironment": false
 }
