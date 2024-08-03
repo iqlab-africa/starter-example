@@ -1,8 +1,10 @@
 #!/bin/bash
+echo "🔴 🔴 🔴 🔴 🔴 Generic GitHub Push script starting ..."
+echo "🔴 🔴 🔴"
 
 # Ensure the script is called with three arguments
 if [ "$#" -ne 3 ]; then
-  echo "👿 Please enter required parameters: SSH key path, repository SSH URL, and commit message. 👿"
+  echo "👿 Please enter required parameters: SSH key path, repository SSH URL and commit message. 👿"
   exit 1
 fi
 
@@ -12,10 +14,10 @@ repository_ssh_url=$2
 commit_message=$3
 
 # Echo the parameters for clarity
-echo "🔴 Parameters provided:"
-echo "SSH Key Path: $ssh_key_path"
-echo "Repository SSH URL: $repository_ssh_url"
-echo "Commit Message: $commit_message"
+echo "🔴 🔴 Parameters provided:"
+echo "🔴 SSH Key Path: $ssh_key_path"
+echo "🔴 Repository SSH URL: $repository_ssh_url"
+echo "🔴 Commit Message: $commit_message"
 
 # Check if SSH key path file exists
 if [ ! -f "$ssh_key_path" ]; then
@@ -41,11 +43,11 @@ ssh-add "$ssh_key_path" || { echo "👿 Failed to add SSH key. 👿"; exit 1; }
 ssh -T git@github.com 
 
 # Set the remote URL
-echo "🍎 🍎 🍎 Setting remote SSH URL ..."
+echo "🍎 🍎 🍎 Setting remote SSH URL ... $2"
 git remote set-url origin "$repository_ssh_url"
 
 # Push the code
-echo "🍎 🍎 🍎 Pushing the code..."
-git push || { echo "👿 Failed to push code. 👿"; exit 1; }
+echo "🍎 🍎 🍎 ... Pushing the code ..."
+git push || { echo "👿👿👿👿 Failed to push code. 👿"; exit 1; }
 
 echo "DONE!! 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬 🥬"
