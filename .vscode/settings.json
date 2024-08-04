@@ -6,8 +6,11 @@
         "APIKEY",
         "premierleague",
         "robocorp",
+        "SERPDOG",
+        "SERPER",
         "sitelinks",
-        "workitems"
+        "workitems",
+        "WSKEY"
     ],
     "python.terminal.activateEnvironment": false
 }
