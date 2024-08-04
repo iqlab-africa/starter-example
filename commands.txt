@@ -19,6 +19,7 @@
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/i_account2 && ssh -T git@github.com
 
+🍎🍎🍎🍎 COMMAND TO PUSH CODE
 ./push.sh ~/.ssh/i_account2 git@github.com:iqlab-africa/starter-example.git "🍎🍎 added save to firestore"
 
 curl -X POST "https://cloud.robocorp.com/api/v1/workspaces/926b8a1c-1df9-4643-b253-739cab73e459/processes/27e881fa-6982-4029-bf42-926f7589be57/process-runs" \

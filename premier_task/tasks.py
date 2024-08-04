@@ -113,7 +113,8 @@ def premier_task():
         print(f"{tag} video_links 🍎🍎 video #{count}: {m['link']}")
         count = count + 1
 
-    print(f"{tag} video_links type: {type(video_links)}")
+    print(f"\n\n{tag} video_links type: {type(video_links)}");
+    print(f'{tag} \n\n\n');
     sendResults(video_links)
     return video_links
 
@@ -133,55 +134,3 @@ def sendResults(data_list):
     print(f"{tag} 🥬🥬🥬🥬🥬🥬🥬🥬 we seem to be done & dusted, Jack? 🥬🥬🥬🥬🥬🥬🥬🥬")
 
 
-# def search(query):
-#     """Search the web for League info ..."""
-#     print(f"\n\n\n{tag} search starting ... 💙 query: {query}")
-#     local_list = []
-#     payload = {"api_key": SERPDOG_APIKEY, "q": query, "gl": "eu"}
-#     resp = requests.get("https://api.serpdog.io/lite_search", params=payload)
-#     # Check if the request was successful
-#     print(resp.json())
-#     if resp.status_code == 200:
-#         print(
-#             f"{tag} We good, Boss! 💙 Status code: {resp.status_code} elapsed: {resp.elapsed}"
-#         )
-#     else:
-#         print(
-#             f"{tag} Call failed. 👿 Status code: {resp.status_code} reason: ${resp.reason}"
-#         )
-#         res = useSerper(query)
-#         return res
-#     # process the response
-#     m = resp.json()
-#     link_list = list(m.values())
-#     print(f"{tag} number of links:  💙 {len(link_list)}")
-#     count = 0
-#     for x in link_list:
-#         if count > 2:
-#             print(f"{tag} number of elements: 🥦 {len(x)} 🥦")
-#             for z in x:
-#                 try:
-#                     link = z.get("link")
-#                     snippet = z.get("snippet")
-#                     title = z.get("title")
-#                     rank = z.get("rank")
-#                     m_date = datetime.now().isoformat()
-#                     if link and "watch" in link:
-#                         fv = FootballVideo(
-#                             snippet=snippet,
-#                             title=title,
-#                             link=link,
-#                             rank=rank,
-#                             date=m_date,
-#                         )
-#                         local_list.append(fv)
-#                     else:
-#                         print("👿 Link not found for the given item.")
-#                 except Exception as e:
-#                     print(f"An error occurred: {e}")
-#                     continue  # This will skip to the next iteration in case of an exception
-#         else:
-#             print(f"{tag} ignored ... count: {count}")
-#         count = count + 1
-
-#     return local_list
