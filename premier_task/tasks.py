@@ -77,11 +77,12 @@ def search_video(query):
         print(f"{tag} organic results: 🍎 {len(organic_results)} videos ")
 
         for video_element in organic_results:
-            video_element["searched"] = time.time()
-            video_element["iso_date"] = time.ctime()
-            list.append(video_element)
+            if "watch?" in video_element["link"]:
+                video_element["searched"] = time.time()
+                video_element["iso_date"] = time.ctime()
+                list.append(video_element)
 
-        # print(f"{tag} organic_results after filtering: 🥬 {len(list)} ")
+        print(f"{tag} organic_results after filtering: 🥬 {len(list)} ")
     else:
         print(f"{tag} Houston, 👿👿👿 we have a problem: {res.reason}")
 
