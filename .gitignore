@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+premier_task/.env
+starter_task/.env
 
 # C extensions
 *.so
