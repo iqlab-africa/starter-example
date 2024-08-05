@@ -53,7 +53,7 @@ def measure_time(task):
     yield  # Task executes here
     duration = time.time() - start
     elapsed = round(duration, 1)
-    print(f"{tag} Task {task.name} took  🍎🍎 {elapsed} seconds")
+    print(f"{tag} Task {task.name} took  🍎🍎 {elapsed} seconds\n\n")
 
 def search_video(query):
     conn = http.client.HTTPSConnection("google.serper.dev")
@@ -77,7 +77,7 @@ def search_video(query):
                 video_element["searched"] = time.time()
                 list.append(video_element)
 
-        print(f"{tag} organic_results after filtering: 🥬 {len(organic_results)} ")
+        print(f"{tag} organic_results after filtering: 🥬 {len(list)} ")
     else:
         print(f"{tag} Houston, 👿👿👿 we have a problem: {res.reason}")
 
@@ -93,9 +93,13 @@ def chill():
 
 @task
 def premier_task():
-    """Premier Task"""
+    """Premier Task is a bot that searches for sports videos based on static queries. 
+    Results are written to a backend api that stores them in a database."""
     print(
-        f"{tag} Houston, we are starting ...  💙 💙 💙 💙 💙 queries: {len(premier_league_queries) + len(nfl_queries)} 💙"
+        f"\n\n\n{tag} Houston, we are starting the engines!  🚀 🚀 🚀"
+    )
+    print(
+        f"{tag} 💙 💙 💙 💙 💙  static queries: {len(premier_league_queries) + len(nfl_queries)} 💙 "
     )
     init()
     query_count = 1
@@ -142,7 +146,7 @@ def sendResults(data_list):
     resp = requests.post(WEB_URL, data=json.dumps(data_list), headers=headers)
     if resp.status_code < 202:
         print(
-            f"\n\n{tag} we sittin pretty good, Boss!! 🥬🥬🥬 statusCode: {resp.status_code}\n"
+            f"{tag} we sitting pretty good, Boss!! 🥬🥬🥬 statusCode: {resp.status_code}\n"
         )
     else:
         print(
