@@ -26,6 +26,9 @@ premier_league_queries = [
     "latest Premier League highlight videos",
     "latest Premier League player videos",
     "latest Premier League team videos",
+    "latest Supersport DSTV highlight videos",
+    "latest African Football League videos",
+    "latest Champions League videos",
 ]
 
 nfl_queries = [
@@ -55,6 +58,7 @@ def measure_time(task):
     elapsed = round(duration, 1)
     print(f"{tag} Task {task.name} took  🍎🍎 {elapsed} seconds\n\n")
 
+
 def search_video(query):
     conn = http.client.HTTPSConnection("google.serper.dev")
     payload = json.dumps({"q": query})
@@ -73,17 +77,19 @@ def search_video(query):
         print(f"{tag} organic results: 🍎 {len(organic_results)} videos ")
 
         for video_element in organic_results:
-            if "watch?" in video_element["link"]:
-                video_element["searched"] = time.time()
-                list.append(video_element)
+            video_element["searched"] = time.time()
+            video_element["iso_date"] = time.ctime()
+            list.append(video_element)
 
-        print(f"{tag} organic_results after filtering: 🥬 {len(list)} ")
+        # print(f"{tag} organic_results after filtering: 🥬 {len(list)} ")
     else:
         print(f"{tag} Houston, 👿👿👿 we have a problem: {res.reason}")
 
     return list
 
+
 SLEEP_TIME = 2
+
 
 def chill():
     """Sleep for a few seconds"""
@@ -91,20 +97,19 @@ def chill():
     time.sleep(SLEEP_TIME)
     print(f"{tag} awake now after sleeping for {SLEEP_TIME} seconds: {time.ctime()}")
 
+
 @task
 def premier_task():
-    """Premier Task is a bot that searches for sports videos based on static queries. 
+    """Premier Task is a bot that searches for sports videos based on static queries.
     Results are written to a backend api that stores them in a database."""
-    print(
-        f"\n\n\n{tag} Houston, we are starting the engines!  🚀 🚀 🚀"
-    )
+    print(f"\n\n\n{tag} Houston, we are starting the engines!  🚀 🚀 🚀")
     print(
         f"{tag} 💙 💙 💙 💙 💙  static queries: {len(premier_league_queries) + len(nfl_queries)} 💙 "
     )
     init()
     query_count = 1
 
-    blues = '🔵🔵🔵🔵🔵'
+    blues = "🔵🔵🔵🔵🔵"
     # Search for Premier League content
     for query in premier_league_queries:
         print(
