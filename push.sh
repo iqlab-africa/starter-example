@@ -3,6 +3,9 @@
 # 🔴 SSH Key Path: /Users/aubreymalabie/.ssh/i_account2 - this is where ssgen has put your key. this is the key to be installed on GitHub console
 # 🔴 Repository SSH URL: git@github.com:iqlab-africa/starter-example.git - this is the SSH url and NOT the normal https - You get this by clicking Get Code on the console
 # 🔴 Commit Message: refactored push script 👿
+# 🍎🍎🍎🍎 COMMAND TO PUSH CODE
+# ./push.sh ~/.ssh/i_account2 git@github.com:iqlab-africa/starter-example.git "🔵 refactored save to firestore"
+
 
 echo "🔴 🔴 🔴 🔴 🔴 Generic GitHub Push script starting ..."
 echo "🔴 🔴 🔴"
