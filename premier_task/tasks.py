@@ -114,7 +114,7 @@ def premier_task():
         count = count + 1
 
     print(f"\n\n{tag} video_links type: {type(video_links)}");
-    print(f'{tag} \n\n\n');
+    print(f'{tag} {video_links} \n\n\n');
     sendResults(video_links)
     return video_links
 
