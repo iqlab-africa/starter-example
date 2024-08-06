@@ -6,10 +6,11 @@ The Bot searches videos about football as defined by the world and as defined by
 The front end [VideoApp Repo](https://github.com/iqlab-africa/starter_app)  
 The backend [Starter Node Backend Repo](https://github.com/iqlab-africa/starter-backend)  
 
-### Running the VideoBot in a Control Room process  
+### Robocorp API Key  
 The bot is uploaded to the Control Room using the Robocorp Visual Studio Code plugin. The extension needs an API key which can be obtained via the Integrations tab in the [Control Room console](https://cloud.robocorp.com/iqlabafrica6f57a/robotsdevelopment/api)  
 <img width="1296" alt="Screenshot 2024-08-06 at 12 43 42" src="https://github.com/user-attachments/assets/700db203-b458-4693-845a-41cf71d97bd5">
 
+### Running the VideoBot in a Control Room process  
 <img width="1549" alt="Screenshot 2024-08-06 at 00 35 06" src="https://github.com/user-attachments/assets/7da3a31b-59f9-4dd6-af21-9ac70b76c681">
 
 ### Checking out the failed steps from VideoBot runs  
