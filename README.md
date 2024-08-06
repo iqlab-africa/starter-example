@@ -4,6 +4,7 @@ Example Robocorp bot that searches for sports videos and sends the results to a 
 The Bot searches videos about football as defined by the world and as defined by the United States. It searches the web using a SERP API and filters the results before sending them to the starter backend where they are saved in a database. The bot is deployed on Robocorp's Control Room (the screenshots represents the experience). The iOS/Android/Web app starts and stops the VideoBot and consumes the search result. Please see the code in the other 2 repos.  
 
 ### Running the VideoBot in a Control Room process  
+The bot is uploaded to the Control Room using the Robocorp Visual Studio Code plugin. The extension needs an API key which can be obtained via the Integrations tab in the Control Room console ()  
 
 <img width="1549" alt="Screenshot 2024-08-06 at 00 35 06" src="https://github.com/user-attachments/assets/7da3a31b-59f9-4dd6-af21-9ac70b76c681">
 
@@ -20,5 +21,5 @@ The Bot searches videos about football as defined by the world and as defined by
 ### Checking out the dance floor!    
 <img width="1553" alt="Screenshot 2024-08-06 at 00 44 44" src="https://github.com/user-attachments/assets/511aab12-0d76-4a6d-92c2-cba1110cfcac">
 
-### Logging on the local dev machine console  
+### Logging on the local development machine console 😍   
 <img width="1148" alt="Screenshot 2024-08-06 at 00 48 31" src="https://github.com/user-attachments/assets/1ce7ae12-1c8e-490e-915b-238a719d55aa">
