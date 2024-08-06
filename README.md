@@ -8,6 +8,7 @@ The backend [Starter Node Backend Repo](https://github.com/iqlab-africa/starter-
 
 ### Robocorp API Key  
 The bot is uploaded to the Control Room using the Robocorp Visual Studio Code plugin. The extension needs an API key which can be obtained via the Integrations tab in the [Control Room console](https://cloud.robocorp.com/iqlabafrica6f57a/robotsdevelopment/api)  
+  
 <img width="1296" alt="Screenshot 2024-08-06 at 12 43 42" src="https://github.com/user-attachments/assets/700db203-b458-4693-845a-41cf71d97bd5">
 
 ### Running the VideoBot in a Control Room process  
