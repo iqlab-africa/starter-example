@@ -1,9 +1,13 @@
 # VideoBot
 
 Example Robocorp bot that searches for sports videos and sends the results to a backend
-The Bot searches videos about football as defined by the world and as defined by the United States. It searches the web using a SERP API and filters the results before sending them to the starter backend where they are saved in a database. The bot is deployed on Robocorp's Control Room (the screenshots represents the experience). The iOS/Android/Web app starts and stops the VideoBot and consumes the search result. Please see the code in the other 2 repos.
+The Bot searches videos about football as defined by the world and as defined by the United States. It searches the web using a SERP API and filters the results before sending them to the starter backend where they are saved in a database. The bot is deployed on Robocorp's Control Room (the screenshots represents the experience). The iOS/Android/Web app starts and stops the VideoBot and consumes the search result. Please see the code in the other 2 repos.  
+
+### Running the VideoBot as a step 
 
 <img width="1549" alt="Screenshot 2024-08-06 at 00 35 06" src="https://github.com/user-attachments/assets/7da3a31b-59f9-4dd6-af21-9ac70b76c681">
+
+### Checking out the steps run by VideoBot
 <img width="1565" alt="Screenshot 2024-08-06 at 00 42 46" src="https://github.com/user-attachments/assets/e15b38cc-b1d5-4cdb-bedf-a34c7b099fd8">
 <img width="1562" alt="Screenshot 2024-08-06 at 00 42 16" src="https://github.com/user-attachments/assets/13cc7037-0b30-47b7-ab1d-88731d00a940">
 <img width="1562" alt="Screenshot 2024-08-06 at 00 43 53" src="https://github.com/user-attachments/assets/05655187-4126-429d-9083-cb26c1f996e3">
