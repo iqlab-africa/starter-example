@@ -1,2 +1,2 @@
 # starter-example
-Example repo to help document steps for automating build-test-deploy for projects
+Example Robocorp bot that searches for sports videos and sends the results to a backend
