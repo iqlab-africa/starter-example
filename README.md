@@ -16,6 +16,8 @@ The Bot searches videos about football as defined by the world and as defined by
 
 ### Using the API Helper control the Bots and Process from other apps  
 <img width="1562" alt="Screenshot 2024-08-06 at 00 43 53" src="https://github.com/user-attachments/assets/05655187-4126-429d-9083-cb26c1f996e3">
+
+### Checking out the dance floor!    
 <img width="1553" alt="Screenshot 2024-08-06 at 00 44 44" src="https://github.com/user-attachments/assets/511aab12-0d76-4a6d-92c2-cba1110cfcac">
 
 ### Logging on the local dev machine console  
